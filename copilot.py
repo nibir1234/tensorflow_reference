@@ -28,3 +28,12 @@ def calculate_multiclass_results(y_true, y_pred):
 # ========================================================================================================================
 
 
+def compare_models(model_1_results, baseline_results):
+  import numpy as np
+  return np.array(list(model_1_results.values())) > np.array(list(baseline_results.values()))
+
+
+# ========================================================================================================================
+
+
+
