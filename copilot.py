@@ -36,9 +36,9 @@ def calculate_multiclass_results(y_true, y_pred):
 
 def calculate_multiclass_results_separate_prf1(y_true, y_pred, score_func):
 
-  model_accuracy = accuracy_score(y_true, y_pred) * 100
   model_score_all = score_func(y_true, y_pred, average=None)
-  model_score_class = {"neutral": model_score_all[0],
+  model_score_class = {
+                  "neutral": model_score_all[0],
                   "positive": model_score_all[1],
                   "negative": model_score_all[2]
   }
